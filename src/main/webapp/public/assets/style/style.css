@@ -1,0 +1,35 @@
+*{
+    font-family: Montserrat, sans-serif;
+}
+
+/* HEADER */
+.logo-container{
+    margin:6px 0px 6px 100px;
+}
+
+.logo{
+    width: 90px;
+}
+
+.slogan{
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.links-container > a{
+    color: #111111;
+    margin-right: 100px;
+}
+
+.header-container{
+    box-shadow: 0px 1px 6px 0px rgba(17, 17, 17, 0.2);
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(17, 17, 17, 0.2);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(17, 17, 17, 0.2);
+}
+
+/* TOP PART */
+.money{
+    width: 600px;
+}

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kalbanq_servlet:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>kalbanq_servlet</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="kalbanq_servlet-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="kalbanq_servlet:war exploded" />
+    </root>
+  </artifact>
+</component>
