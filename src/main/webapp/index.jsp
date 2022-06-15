@@ -10,7 +10,7 @@
                 <h1 class="title my-2 fw-bolder">KalbBank votre banque <br> nouvelle génération</h1>
                 <p class="my-4 fw-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi <br> cum delectus nobis perspiciatis quam quibusdam quis rem!</p>
 
-                <button type="button" class="open-acount-btn btn" href="/">Ouvrez votre compte</button>
+                <a href="contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
             </div>
 
             <div class="">
@@ -45,12 +45,11 @@
             </div>
             <h3 class="text-white text-center pt-5">Comparez les offres KalbBank et choisissez la vôtre</h3>
             <div class="text-center mt-5">
-                <button type="button" class="open-acount-btn btn" href="/">Ouvrez votre compte</button>
+                <a href="contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
             </div>
         </div>
     </div>
 </div>
-
 
 <%@include file="includes/footer.jsp" %>
 </html>

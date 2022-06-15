@@ -1,5 +1,7 @@
 package com.kalbanq_servlet.servlet;
 
+import com.kalbanq_servlet.entity.User;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -32,6 +34,20 @@ public class LoginServlet extends HttpServlet {
             // request.setAttribute("variables", errors);
             doGet(request, response);
         }
+
+//        if (user != null) {
+//            session.setAttribute("user", user);
+//            System.out.println(user);
+//        } else {
+//            // Show error like "Login failed, unknown user, try again.".
+//        }
+//
+//        if (session.getAttribute("user") == null) {
+//            response.sendRedirect(request.getContextPath() + "/login"); // Not logged in, redirect to login page.
+//        } else {
+//            chain.doFilter(request, response); // Logged in, just continue chain.
+//        }
+
             // System.out.println(response);
             // System.out.println(request);
         // Appel d'un service qui va checker l'identifiant & le mdp checkCreditentials(login, password){ traitement ici }
