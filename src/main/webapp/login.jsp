@@ -11,18 +11,11 @@
     <div class="login-container">
         <div class="login-form-container container card d-flex justify-content-center align-items-center py-5">
 
-<%--            <% if (error.length() > 0)%>--%>
-<%--            <c:if test="${error}">--%>
+            <p class="error-text text-start mt-3">${message}</p>
+<%--            <% if (!request.getAttribute("error").equals("")){ %>--%>
 <%--                <p class="error-text text-start mt-3">${error}</p>--%>
-<%--            </c:if>--%>
-
-<%--                <% if (request.getAttribute("error") == null){--%>
-<%--                    response.sendRedirect("/contact");--%>
-<%--                }%>--%>
-
-<%--            <% for (int i=0; i < 5; i++){%>--%>
-<%--            <p>Numéro: <%= i %></p>--%>
 <%--            <% } %>--%>
+
             <div class="d-block text-center my-3">
                 <i class="fa-regular fa-user fa-3x"></i>
                 <h1 class="login-title mt-2">Mon espace client</h1>
@@ -30,8 +23,8 @@
 
             <form action="login" id="login-form" class="login-form d-flex flex-wrap justify-content-center align-items-center" method="post">
                 <div class="login-widget-containers my-3">
-                    <div class="login-labels-containers mb-2"><label for="login" class="login-labels">Identifiant</label></div>
-                    <input class="login-inputs w-100" type="text" name="login" id="login">
+                    <div class="login-labels-containers mb-2"><label for="identifier" class="login-labels">Identifiant</label></div>
+                    <input class="login-inputs w-100" type="text" name="identifier" id="identifier">
                 </div>
 
                 <div class="login-widget-containers my-3">
@@ -47,7 +40,6 @@
             </form>
         </div>
     </div>
-
 </body>
 
 <%@include file="includes/footer.jsp" %>

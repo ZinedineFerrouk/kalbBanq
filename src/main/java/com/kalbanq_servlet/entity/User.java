@@ -3,33 +3,31 @@ package com.kalbanq_servlet.entity;
 import java.util.Date;
 
 public class User {
-    private int id;
+    private String id;
     private String email;
     private String password;
     private String roles;
     private String user_token;
-    private boolean activated;
     private Date created_at;
     private Date updated_at;
 
     public User(){}
 
-    public User(int id, String email, String password, String roles, String user_token, boolean activated, Date created_at, Date updated_at) {
+    public User(String id, String email, String password, String roles, String user_token, Date created_at, Date updated_at) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.roles = roles;
         this.user_token = user_token;
-        this.activated = activated;
         this.created_at = created_at;
         this.updated_at = updated_at;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -65,14 +63,6 @@ public class User {
         this.user_token = user_token;
     }
 
-    public boolean isActivated() {
-        return activated;
-    }
-
-    public void setActivated(boolean activated) {
-        this.activated = activated;
-    }
-
     public Date getCreated_at() {
         return created_at;
     }
@@ -97,7 +87,6 @@ public class User {
                 ", password='" + password + '\'' +
                 ", roles='" + roles + '\'' +
                 ", user_token='" + user_token + '\'' +
-                ", activated=" + activated +
                 ", created_at=" + created_at +
                 ", updated_at=" + updated_at +
                 '}';

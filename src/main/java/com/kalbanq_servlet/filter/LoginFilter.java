@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/mon-espace/*")
+@WebFilter(filterName = "LoginFilter", urlPatterns = {""})
 public class LoginFilter implements Filter {
 
     @Override
@@ -29,11 +29,11 @@ public class LoginFilter implements Filter {
         HttpSession session = request.getSession(false);
         System.out.println("Filtre en cours");
 
-//        if (session == null || session.getAttribute("user") == null) {
-//            response.sendRedirect(request.getContextPath() + "/login"); // No logged-in user found, so redirect to login page.
-//        } else {
-//            chain.doFilter(req, res); // Logged-in user found, so just continue request.
-//        }
+        if (session == null || session.getAttribute("user") == null) {
+            response.sendRedirect(request.getContextPath() + "/login"); // No logged-in user found, so redirect to login page.
+        } else {
+            chain.doFilter(req, res); // Logged-in user found, so just continue request.
+        }
     }
 
     @Override
