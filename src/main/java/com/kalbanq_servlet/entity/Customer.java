@@ -1,6 +1,7 @@
 package com.kalbanq_servlet.entity;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Customer {
     private String id;
@@ -10,21 +11,25 @@ public class Customer {
     private String gender;
     private String address;
     private String country;
+    private Banker banker;
+    private User user;
     private String phone;
-    private LocalDate birthdate;
+    private Date birthdate;
 
     public Customer(){}
 
-    public Customer(String id, String email, String first_name, String last_name, String gender, String address, String country, String phone, LocalDate birthdate) {
+    public Customer(String id, String email, String first_name, String last_name, String gender, String address, String phone, Date birthdate, String country, Banker banker, User user) {
         this.id = id;
         this.email = email;
         this.first_name = first_name;
         this.last_name = last_name;
         this.gender = gender;
         this.address = address;
-        this.country = country;
         this.phone = phone;
         this.birthdate = birthdate;
+        this.country = country;
+        this.banker = banker;
+        this.user = user;
     }
 
     public String getId() {
@@ -75,14 +80,6 @@ public class Customer {
         this.address = address;
     }
 
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -91,12 +88,35 @@ public class Customer {
         this.phone = phone;
     }
 
-    public LocalDate getBirthdate() {
+    public Date getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
+    public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public Banker getBanker() {
+        return banker;
+    }
+
+    public void setBanker(Banker banker) {
+        this.banker = banker;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

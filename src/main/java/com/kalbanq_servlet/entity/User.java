@@ -4,8 +4,6 @@ import java.util.Date;
 
 public class User {
     private String id;
-    private String email;
-    private String password;
     private String roles;
     private String user_token;
     private Date created_at;
@@ -13,10 +11,8 @@ public class User {
 
     public User(){}
 
-    public User(String id, String email, String password, String roles, String user_token, Date created_at, Date updated_at) {
+    public User(String id, String roles, String user_token, Date created_at, Date updated_at) {
         this.id = id;
-        this.email = email;
-        this.password = password;
         this.roles = roles;
         this.user_token = user_token;
         this.created_at = created_at;
@@ -29,22 +25,6 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getRoles() {
@@ -83,8 +63,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 ", roles='" + roles + '\'' +
                 ", user_token='" + user_token + '\'' +
                 ", created_at=" + created_at +
