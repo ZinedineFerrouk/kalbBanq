@@ -11,8 +11,10 @@
     <div class="login-container">
         <div class="login-form-container container card d-flex justify-content-center align-items-center py-5">
 
-<%--            <p class="error-text text-start mt-3"></p>--%>
-                ${message}
+            <% if(request.getAttribute("message") != null) { %>
+                <p class="error-text text-start mt-3">${message}</p>
+            <% } %>
+
 <%--            <% if (!request.getAttribute("error").equals("")){ %>--%>
 <%--                <p class="error-text text-start mt-3">${error}</p>--%>
 <%--            <% } %>--%>
