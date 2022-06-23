@@ -1,4 +1,4 @@
-package com.kalbanq_servlet;
+package com.kalbanq;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

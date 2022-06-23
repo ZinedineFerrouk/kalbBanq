@@ -1,4 +1,4 @@
-package com.kalbanq_servlet.servlet;
+package com.kalbanq.servlet;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

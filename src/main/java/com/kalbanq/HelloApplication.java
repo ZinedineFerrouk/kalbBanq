@@ -1,4 +1,4 @@
-package com.kalbanq_servlet;
+package com.kalbanq;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
