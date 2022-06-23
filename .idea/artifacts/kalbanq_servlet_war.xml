@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="kalbanq_servlet-1.0-SNAPSHOT.war">
+    <root id="archive" name="petstore-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="kalbanq_servlet:war exploded" />
     </root>
   </artifact>
