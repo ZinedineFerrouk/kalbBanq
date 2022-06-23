@@ -25,12 +25,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet(name = "ClientAreaServlet", urlPatterns={"/ClientAreaServlet"} )
+@WebServlet(name = "ClientAreaServlet", urlPatterns={"/client-area"} )
 public class ClientAreaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        HttpSession session = request.getSession();
+        this.getServletContext().getRequestDispatcher("/client-area.jsp").forward(request, response);
+       /* HttpSession session = request.getSession();
         JSONObject customer= (JSONObject) session.getAttribute("customer");
         System.out.println(customer);
 
@@ -43,7 +43,7 @@ public class ClientAreaServlet extends HttpServlet {
         JSONObject jsonBody = new JSONObject();
 
 
-        jsonBody.put("customer_id", customer);
+        jsonBody.put("customer_id", customer);*/
 
     }
 
