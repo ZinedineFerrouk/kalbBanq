@@ -4,9 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import com.kalbanq_servlet.entity.Banker;
-import com.kalbanq_servlet.entity.Customer;
-import com.kalbanq_servlet.entity.User;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
