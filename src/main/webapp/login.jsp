@@ -15,10 +15,6 @@
                 <p class="error-text text-start mt-3">${message}</p>
             <% } %>
 
-<%--            <% if (!request.getAttribute("error").equals("")){ %>--%>
-<%--                <p class="error-text text-start mt-3">${error}</p>--%>
-<%--            <% } %>--%>
-
             <div class="d-block text-center my-3">
                 <i class="fa-regular fa-user fa-3x"></i>
                 <h1 class="login-title mt-2">Mon espace client</h1>
@@ -27,12 +23,12 @@
             <form action="login" id="login-form" class="login-form d-flex flex-wrap justify-content-center align-items-center" method="post">
                 <div class="login-widget-containers my-3">
                     <div class="login-labels-containers mb-2"><label for="identifier" class="login-labels">Identifiant</label></div>
-                    <input class="login-inputs w-100" type="text" name="identifier" id="identifier">
+                    <input class="login-inputs w-100 px-2" type="text" name="identifier" id="identifier">
                 </div>
 
                 <div class="login-widget-containers my-3">
                     <div class="login-labels-containers mb-2"><label for="password" class="login-labels">Mot de passe</label></div>
-                    <input class="login-inputs w-100" type="password" name="password" id="password">
+                    <input class="login-inputs w-100 px-2" type="password" name="password" id="password">
                 </div>
 
                 <div class="w-100 text-center pt-3 w-100">

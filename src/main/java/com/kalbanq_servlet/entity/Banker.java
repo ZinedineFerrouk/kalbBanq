@@ -1,7 +1,6 @@
 package com.kalbanq_servlet.entity;
 
 public class Banker {
-    private String id;
     private String email;
     private String gender;
     private String first_name;
@@ -9,20 +8,11 @@ public class Banker {
 
     public Banker(){}
 
-    public Banker(String id, String email, String gender, String first_name, String last_name) {
-        this.id = id;
+    public Banker(String email, String gender, String first_name, String last_name) {
         this.email = email;
         this.gender = gender;
         this.first_name = first_name;
         this.last_name = last_name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getEmail() {
@@ -60,7 +50,6 @@ public class Banker {
     @Override
     public String toString() {
         return "Banker{" +
-                "id='" + id + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
                 ", first_name='" + first_name + '\'' +

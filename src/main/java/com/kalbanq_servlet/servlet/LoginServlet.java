@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         if (session.getAttribute("customer") != null) {
 //            session.invalidate();
-            response.sendRedirect("/contact");
+            response.sendRedirect("/customer/index");
             return;
         }
         this.getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
@@ -56,6 +56,7 @@ public class LoginServlet extends HttpServlet {
         JSONObject data;
         User user;
         Banker banker;
+        Customer customer = new Customer();
 
         try {
             URL url = new URL("http://127.0.0.1:8080/api/auth/");
@@ -95,7 +96,6 @@ public class LoginServlet extends HttpServlet {
             }
             data = (JSONObject) ((JSONArray) object.get("data")).get(0);
 
-            Customer customer = new Customer();
             customer.setId((String) data.get("id"));
             customer.setFirst_name((String) data.get("firstName"));
             customer.setLast_name((String) data.get("lastName"));
@@ -109,7 +109,6 @@ public class LoginServlet extends HttpServlet {
 
             JSONObject bankerData = (JSONObject) data.get("banker");
             banker = new Banker();
-            banker.setId((String) bankerData.get("id"));
             banker.setFirst_name((String) bankerData.get("firstName"));
             banker.setLast_name((String) bankerData.get("lastName"));
             banker.setEmail((String) bankerData.get("email"));
@@ -130,15 +129,14 @@ public class LoginServlet extends HttpServlet {
             // System.out.println(customer.getBanker());
 
             response.getWriter().println(data.toJSONString());
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
         if (!data.isEmpty()) {
-            session.setAttribute("customer", data);
+            session.setAttribute("customer", customer);
             System.out.println(session.getAttribute("customer"));
-            // response.sendRedirect("/mon-espace");
+            response.sendRedirect("/customer/index");
         } else {
             // Show error like "Login failed, unknown data, try again.".
             request.setAttribute("message", "Compte invalide");
