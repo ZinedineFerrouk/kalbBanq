@@ -12,7 +12,7 @@
 
                 <a href="contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
             </div>
-            <a href="client-area.jsp"> page lient</a>
+            <a href="client-area"> page lient</a>
             <div class="">
                 <img class="money" src="public/assets/images/money.svg">
             </div>

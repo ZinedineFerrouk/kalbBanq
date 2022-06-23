@@ -8,14 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-<%--
-<%@include file="includes/connected-header.jsp" %>
---%>
-<head>
 
-</head>
-<body>
 <%@include file="includes/connected-header.jsp" %>
+<body>
+
 
 
 <div class =" d-flex justify-content-center flex-raw d-flex align-items-end" >

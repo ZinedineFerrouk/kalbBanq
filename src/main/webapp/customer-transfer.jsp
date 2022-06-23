@@ -7,9 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
+
     <%@include file="includes/connected-header.jsp" %>
-</head>
+
 <body>
   <div class="blue d-flex justify-content-center">
       <div class="white-b  w-75 m-4 p-3">

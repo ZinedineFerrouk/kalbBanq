@@ -25,8 +25,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet(name = "ClientAreaServlet", urlPatterns={"/client-area"} )
+@WebServlet(name = "ClientAreaServlet", urlPatterns = "/client-area" )
 public class ClientAreaServlet extends HttpServlet {
+    public void init(){}
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.getServletContext().getRequestDispatcher("/client-area.jsp").forward(request, response);
