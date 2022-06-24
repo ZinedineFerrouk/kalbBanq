@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(filterName = "authFilter", urlPatterns = {"/customerss/*"})
+@WebFilter(filterName = "authFilter", urlPatterns = {"/customer/*"})
 public class LoginFilter implements Filter {
     @Override
     public void init(FilterConfig config) throws ServletException {

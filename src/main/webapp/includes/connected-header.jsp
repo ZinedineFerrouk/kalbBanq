@@ -30,24 +30,26 @@
         </div>
     </div>
     <div class="links-container w-50 d-flex justify-content-end align-items-center">
-        <a class="text-decoration-none" href="/customer/index">Accueil</a>
-        <a class="text-decoration-none" href="/customer/accounts">Mes Comptes</a>
-        <a class="text-decoration-none" href="/customer-transfer.jsp">Virement</a>
+        <a class="text-decoration-none" href="${pageContext.request.contextPath}/customer/index">Accueil</a>
+        <a class="text-decoration-none" href="${pageContext.request.contextPath}/customer/accounts">Mes Comptes</a>
+        <a class="text-decoration-none" href="${pageContext.request.contextPath}/customer/transfer">Virement</a>
     </div>
     <div class="text-white cyan w-25 d-flex flex-column bd-highlight justify-content-center p-4">
         <div class="small fw-light bd-highlight">
-            Votre conseiller KalBank
+            Votre conseiller KalbBank
         </div>
         <div class="bd-highlight">
-            <p class="fw-normal">${banker.getGender()} ${banker.getLast_name()} ${banker.getFirst_name()}</p>
+            <p class="fw-normal">${customer.getBanker().getGender()} ${customer.getBanker().getLast_name()} ${customer.getBanker().getFirst_name()}</p>
         </div>
         <div class="bd-highlight">
-            <p class="fw-normal">${customer.getPhone()}</p>
+            <p class="fw-normal">
+                <a class="text-decoration-none" href="tel:+ ${customer.getPhone()}">${customer.getPhone()}</a>
+            </p>
         </div>
     </div>
 
         <div class="red-header px-3 me-3 d-flex justify-content-center align-items-center">
-            <a class="fw-light" href="/logout">
+            <a class="fw-light" href="${pageContext.request.contextPath}/logout">
                 <div class="text-center mt-1 py-1">
                     <i class="fa-solid fa-power-off fa-3x fa-inverse w-50"></i>
                 </div>

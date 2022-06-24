@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/1144417b23.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="public/assets/style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/assets/style/style.css"/>
     <title>Kalbanq - La banque qui soucie d'elle même</title>
 </head>
 <body>
@@ -27,14 +27,14 @@
 <div class="header-container sticky-top d-flex justify-content-between align-items-center">
     <div class="w-50">
         <div class="logo-container">
-            <a href="/"><img class="logo" src="public/assets/images/logo_banq_2.png"></a>
+            <a href="${pageContext.request.contextPath}/"><img class="logo" src="${pageContext.request.contextPath}/public/assets/images/logo_banq_2.png"></a>
             <p class="slogan">L'argent avant les gens</p>
         </div>
     </div>
 
     <div class="links-container w-50 d-flex justify-content-end">
-        <a class="text-decoration-none" href="/">Accueil</a>
+        <a class="text-decoration-none" href="${pageContext.request.contextPath}/">Accueil</a>
         <a class="text-decoration-none" href="#a-propos">A Propos</a>
-        <a class="text-decoration-none" href="login">Espace Client</a>
+        <a class="text-decoration-none" href="${pageContext.request.contextPath}/login">Espace Client</a>
     </div>
 </div>

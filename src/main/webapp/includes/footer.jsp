@@ -16,7 +16,7 @@
         </div>
 
         <div class="w-25 mx-auto text-center">
-            <a href="/"><img class="footer-logo" src="public/assets/images/logo_banq.png"></a>
+            <a href="${pageContext.request.contextPath}/"><img class="footer-logo" src="${pageContext.request.contextPath}/public/assets/images/logo_banq.png"></a>
             <p class="slogan">L'argent avant les gens</p>
         </div>
 

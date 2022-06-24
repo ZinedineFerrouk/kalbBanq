@@ -18,6 +18,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -26,11 +28,21 @@ import java.util.UUID;
 public class AccountsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get formatted current date
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+        String currentDate = formatter.format(date);
+        request.setAttribute("currentDate", currentDate);
+
+        // On déclare une map dans laquelle on va stocker chaque comptes & ensuite modéliser chaque comptes
+        // A l'aide des Entity pour pouvoir utiliser les getter et setter
         Map<UUID, Account> accountMap = new HashMap<>();
         // Récupérer l'id du customer depuis la session
         HttpSession session = request.getSession();
         Customer customer = (Customer) session.getAttribute("customer");
 
+        // Appel à l'api (j'aurais dû mettre ça dans un service pour une meilleur
+        // lecture de code cependant manque de temps)
         URL url = new URL("http://localhost:8080/api/account/get-accounts-by-customer_id/" + customer.getId());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -84,8 +96,7 @@ public class AccountsServlet extends HttpServlet {
                 account.setAccountType(accountType);
                 accountMap.put(account.getId(), account);
             }
-            System.out.println(accountMap.size());
-
+//            System.out.println(accountMap.size());
         }catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -10,11 +10,11 @@
                 <h1 class="title my-2 fw-bolder">KalbBank votre banque <br> nouvelle génération</h1>
                 <p class="my-4 fw-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi <br> cum delectus nobis perspiciatis quam quibusdam quis rem!</p>
 
-                <a href="contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
+                <a href="${pageContext.request.contextPath}/contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
             </div>
 
             <div class="">
-                <img class="money" src="public/assets/images/money.svg">
+                <img class="money" src="${pageContext.request.contextPath}/public/assets/images/money.svg">
             </div>
         </div>
 
@@ -39,13 +39,13 @@
     <div class="cards-background-container d-flex justify-content-center align-items-center">
         <div class="bg-transparent container">
             <div class="d-flex justify-content-center align-items-center">
-                <img class="n26-card-red" src="public/assets/images/kalbbank-cards-mastercard-rhubarb-fr.png">
-                <img class="n26-card-black" src="public/assets/images/kalbbank-cards-mastercard-metal-charcoalblack.png">
-                <img class="n26-card-transparent" src="public/assets/images/kalbbank-cards-mastercard-fr.png">
+                <img class="n26-card-red" src="${pageContext.request.contextPath}/public/assets/images/kalbbank-cards-mastercard-rhubarb-fr.png">
+                <img class="n26-card-black" src="${pageContext.request.contextPath}/public/assets/images/kalbbank-cards-mastercard-metal-charcoalblack.png">
+                <img class="n26-card-transparent" src="${pageContext.request.contextPath}/public/assets/images/kalbbank-cards-mastercard-fr.png">
             </div>
             <h3 class="text-white text-center pt-5">Comparez les offres KalbBank et choisissez la vôtre</h3>
             <div class="text-center mt-5">
-                <a href="contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
+                <a href="${pageContext.request.contextPath}/contact"><button type="button" class="open-acount-btn btn">Ouvrez votre compte</button></a>
             </div>
         </div>
     </div>

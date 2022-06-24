@@ -6,22 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="includes/connected-header.jsp" %>
 
 <div class ="d-flex justify-content-center flex-raw d-flex align-items-end my-3">
     <div class="fw-bold t-blue-f text-decoration-underline text-center w-50">
-        <p>Bonjour Prénom Nom, bienvenue sur vote espace client</p>
+        <p>Bonjour ${customer.getLast_name()} ${customer.getFirst_name()}, bienvenue sur vote espace client</p>
     </div>
 
     <div class="w-50 mx-auto">
-        <img class="welcome" src="/public/assets/images/img.png">
+        <img class="welcome" src="${pageContext.request.contextPath}/public/assets/images/img.png">
     </div>
 </div>
 
 <div class="blue">
     <div class="d-flex p-5 justify-content-center flex-raw">
         <div class="w-25 bg-light shadow-sm text-center">
-            <img class="card-img-left w-100" src="/public/assets/images/people.png">
+            <img class="card-img-left w-100" src="${pageContext.request.contextPath}/public/assets/images/people.png">
         </div>
 
         <div class="w-25 bg-light shadow-sm p-3">

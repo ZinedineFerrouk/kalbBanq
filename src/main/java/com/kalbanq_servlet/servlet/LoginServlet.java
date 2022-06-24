@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         if (session.getAttribute("customer") != null) {
 //            session.invalidate();
-            response.sendRedirect("/customer/index");
+            response.sendRedirect("/customer/accounts");
             return;
         }
         this.getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
@@ -136,7 +136,7 @@ public class LoginServlet extends HttpServlet {
         if (!data.isEmpty()) {
             session.setAttribute("customer", customer);
             System.out.println(session.getAttribute("customer"));
-            response.sendRedirect("/customer/index");
+            response.sendRedirect("/customer/accounts");
         } else {
             // Show error like "Login failed, unknown data, try again.".
             request.setAttribute("message", "Compte invalide");
